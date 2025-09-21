@@ -1,0 +1,217 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+  animation: fadeInBody 0.8s ease-in;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+  animation: slideIn 0.6s ease-in;
+}
+
+h3 {
+  margin: 15px 0 10px;
+  color: #555;
+}
+
+/* ====== CONTAINERS ====== */
+section {
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 550px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.7s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ====== BUTTONS ====== */
+button {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f88);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ====== MESSAGE ====== */
+#message {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#message.show {
+  opacity: 1;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ====== COUNTER ====== */
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#counterValue {
+  background: #eaf3ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  min-width: 30px;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.counter button:active + #counterValue {
+  transform: scale(1.1);
+  background: #d0e5ff;
+}
+
+/* ====== FORM ====== */
+form {
+  text-align: left;
+}
+
+.form-group {
+  margin: 15px 0;
+  animation: fadeIn 0.8s ease;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  transform: scale(1.01);
+}
+
+/* ====== ERROR & SUCCESS ====== */
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 2px;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  color: #28a745;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== DARK MODE ====== */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode section {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode input {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+.dark-mode input:focus {
+  border-color: #66b2ff;
+  box-shadow: 0 0 6px rgba(102, 178, 255, 0.3);
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #66b2ff, #0056b3);
+}
+
+.dark-mode button:hover {
+  background: linear-gradient(135deg, #3399ff, #004080);
+}

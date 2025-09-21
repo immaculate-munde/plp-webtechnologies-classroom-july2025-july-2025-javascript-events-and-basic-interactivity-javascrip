@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment – Interactive Web Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🧠 Assignment: Interactive Web Pages</h1>
+
+  <!-- 🎉 PART 1: Event Handling -->
+  <section>
+    <h2>Part 1: JavaScript Event Handling</h2>
+    <p>Click the button below to reveal a hidden message using JavaScript events.</p>
+    <button id="showMessageBtn">Click Me!</button>
+    <p id="message" class="hidden">🎉 You triggered an event — great job!</p>
+  </section>
+
+  <!-- 🎮 PART 2: Interactive Features -->
+  <section>
+    <h2>Part 2: Interactive Elements</h2>
+
+    <!-- Light/Dark Mode Toggle -->
+    <div class="feature">
+      <h3>🌙 Dark Mode Toggle</h3>
+      <button id="themeToggle">Toggle Dark Mode</button>
+    </div>
+
+    <!-- Counter -->
+    <div class="feature">
+      <h3>🔢 Counter</h3>
+      <div class="counter">
+        <button id="decreaseBtn">➖</button>
+        <span id="counterValue">0</span>
+        <button id="increaseBtn">➕</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📋✅ PART 3: Form Validation -->
+  <section>
+    <h2>Part 3: Form with Real-Time Validation</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error" id="nameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@mail.com">
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="At least 6 characters">
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <button type="submit">Submit</button>
+      <p id="formSuccess" class="success hidden">✅ Form submitted successfully!</p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
